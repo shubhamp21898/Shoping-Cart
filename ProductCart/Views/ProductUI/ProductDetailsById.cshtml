@@ -1,0 +1,38 @@
+﻿@model ProductCart.Models.ProductModel
+
+@{
+    ViewData["Title"] = "ProductDetailsById";
+}
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+<style>
+    img
+    {
+        width:100%;
+        height:100%;
+    }
+</style>
+</head>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>@Model.Title</h3>
+            <img src="@Model.ImageUrl" alt="Product Image"   class="img-fluid" />
+        </div>
+        <div class="col-md-6">
+            <h4>Product Details</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-4">Title:</dt>
+                <dd class="col-sm-8">@Model.Title</dd>
+                <dt class="col-sm-4">Price:</dt>
+                <dd class="col-sm-8">@Model.Price</dd>
+                <!-- Add more details as needed -->
+            </dl>
+        </div>
+    </div>
+</div>
+

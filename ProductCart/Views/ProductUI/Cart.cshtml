@@ -1,0 +1,86 @@
+﻿@model List<ProductModel>
+
+@{
+    Layout = null; // No layout for this page
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS for the Cart page */
+        body {
+            /*background-image: url('images\emptycart2.svg');*/
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 50px;
+        }
+
+        .cart-container {
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .product-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+            .product-list li {
+                margin-bottom: 10px;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="cart-container">
+        <h2>Shopping Cart</h2>
+        @if (Model.Count > 0)
+        {
+            <ul class="product-list" id="product-list">
+                @foreach (var product in Model)
+                {
+                    <li>
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="@product.ImageUrl" alt="@product.Title" width="100" height="100" />
+                            </div>
+                            <div class="product-details">
+                                <h5>@product.Title</h5>
+                                <p>Price: $@product.Price</p>
+                            </div>
+                        </div>
+                    </li>
+                }
+            </ul>
+            <button type="button" class="btn btn-primary" id="placeOrderBtn">Place Order</button>
+        }
+        else
+        {
+            <div id="no-product-added">
+                <img src="~/images/emptycart2.svg" />
+                <h5>Your cart is empty !</h5>
+                <p>Add items to it now.</p>
+                <a asp-area="" asp-controller="ProductUI" asp-action="Product">Shop Now</a>
+            </div>
+        }
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/product.js"></script>
+    
+</body>
+
+</html>
+

@@ -1,0 +1,30 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+ 
+}
+
+body {
+  /*margin-bottom: 60px;*/
+  width:100%;
+  padding:0px;
+  margin:0;
+}
+.container
+{
+
+}
+/*.pb-3
+{
+    width:fit-content;
+}*/

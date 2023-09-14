@@ -1,0 +1,210 @@
+﻿@model IEnumerable<ProductCart.Models.ProductModel>
+
+@{
+    ViewData["Title"] = "Product";
+}
+<html>
+<head>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="~/css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="~/css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="~/images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="~/css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    @*Jqyery link*@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--Product details Popup style-->
+    <link href="~/css/product.css" rel="stylesheet" />
+    @*Product JS code*@
+    <script src="~/js/Product.js"></script>
+</head>
+<body class="main-layout">
+    <div class="loader_bg">
+        <div class="loader"><img src="~/images/loading.gif" alt="#" /></div>
+    </div>
+<header>
+    <!-- header inner -->
+    <div class="header">
+        <div class="head_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                        <div class="top-box">
+                            <ul class="sociel_link">
+                                <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li> <a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                        <div class="top-box">
+                            <p>long established fact that a reader will be </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                    <div class="full">
+                        <div class="center-desk">
+                                <div class="logo"> <a asp-controller="ProductUI" asp-action="ProductHome"><img src="~/images/logo2.gif" alt="logo" /></a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7 col-md-9 col-sm-9">
+                    <div class="menu-area">
+                        <div class="limit-box">
+                            <nav class="main-menu">
+                                <ul class="menu-area-main">
+                                    <li> <a asp-controller="ProductUI" asp-action="ProductHome">Home</a> </li>
+                                    <li> <a href="about.html">About</a> </li>
+                                    <li class="active"> <a asp-area="" asp-controller="ProductUI" asp-action="Product">product</a> </li>
+                                    <li> <a href="blog.html"> Blog</a> </li>
+                                    <li> <a href="contact.html">Contact</a> </li>
+                                    <li class="mean-last"> <a href="#contact">signup</a> </li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                    <li><a class="buy" href="#">Login</a></li>
+                </div>
+                    <div class="cart-logo" id="cartLogo">
+                        <img src="~/Images/CartLogo.gif" alt="Shopping Cart" class="cart-icon">
+                        <span class="cart-count" id="cartCount">0</span>
+                    </div>
+            </div>
+        </div>
+    </div>
+        <!-- end header inner -->
+</header>
+<div class="text-right">
+    <button type="button" class="btn btn-warning" onclick="addNewProduct()">Add New Product</button>
+   
+</div>
+
+<div class="product">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <h2>our <strong class="black">products</strong></h2>
+                    <span>We package the products with best services to make you a happy customer.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+<div class="title">
+    <h2><strong class="black">Smart Phones</strong></h2>
+    
+</div>
+</div>
+<div class="product-bg">
+
+    <div class="product-bg-white">
+        <div class="container">
+            <div class="row">               
+                @foreach (var item in Model)
+                {
+                    
+                    @if(item.CategoryId==1)
+                    {
+                        
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                                <div class="product-box" data-product-id="@item.Id">
+                                    <i ><img src="@item.ImageUrl" alt="Product Image" width="100" height="100" /></i>
+                                <h3>@item.Title</h3>
+                                <span>@item.Price</span>
+                                    <div class="d-grid gap-2">
+                                        <button type="button" class="btn btn-primary" onclick="addToCart(@item.Id); ToCartIncrease(@item.Id);">Add To Cart</button>
+                                        <button type="button" class="btn btn-success" onclick="buyNow(@item.Id)">Buy</button>
+                                    </div>
+                            </div>
+                        </div>
+                    }
+                   
+                }
+            </div>
+        </div>
+    </div>
+ </div><br />
+<div class="col-md-12">
+<div class="title">
+    <h2><strong class="black">Laptops</strong></h2>
+</div>
+</div>
+<div class="product-bg">
+
+    <div class="product-bg-white">
+        <div class="container">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+
+                    @if (item.CategoryId == 2)
+                    {
+
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                                <div class="product-box" data-product-id="@item.Id">
+                                <i><img src="@item.ImageUrl" alt="Product Image" width="100" height="100" /></i>
+                                <h3>@item.Title</h3>
+                                <span>@item.Price</span>
+                                 <div class="d-grid gap-2">
+                                        <button type="button" class="btn btn-primary" onclick="addToCart(@item.Id)">Add To Cart</button>
+                                        <button type="button" class="btn btn-success" onclick="buyNow(@item.Id)">Buy</button>
+                                 </div>
+                            </div>
+                        </div>
+                    }
+
+                }
+            </div>
+        </div>
+    </div>
+</div>
+   
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content" id="popupContent">
+            <div class="popup-header">
+                <h1 class="popup-title" id="popupTitle">Product Details</h1>
+                <button type="button" class="close" id="closePopup">&times;</button>
+            </div>
+            <div class="popup-body" id="productDetailsContent">
+                <!-- Product details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    @section Scripts {
+       
+    }
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/jquery-3.0.0.min.js"></script>
+    <script src="~/js/plugin.js"></script>
+    <!-- sidebar ~-->
+    <script src="~/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="~/js/product.js"></script>
+    <script src="~/js/custom.js"></script>
+   
+</body>
+</html>
+

@@ -1,0 +1,128 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\css\animate.min.css" />
+    <Content Remove="wwwroot\css\bootstrap.min.css" />
+    <Content Remove="wwwroot\css\jquery-ui.css" />
+    <Content Remove="wwwroot\css\jquery.mCustomScrollbar.min.css" />
+    <Content Remove="wwwroot\css\meanmenu.css" />
+    <Content Remove="wwwroot\css\nice-select.css" />
+    <Content Remove="wwwroot\css\normalize.css" />
+    <Content Remove="wwwroot\css\owl.carousel.min.css" />
+    <Content Remove="wwwroot\css\responsive.css" />
+    <Content Remove="wwwroot\css\slick.css" />
+    <Content Remove="wwwroot\css\style.css" />
+    <Content Remove="wwwroot\icon\1.png" />
+    <Content Remove="wwwroot\icon\2.png" />
+    <Content Remove="wwwroot\icon\3.png" />
+    <Content Remove="wwwroot\icon\4.png" />
+    <Content Remove="wwwroot\icon\calll.png" />
+    <Content Remove="wwwroot\icon\p1.png" />
+    <Content Remove="wwwroot\icon\p2.png" />
+    <Content Remove="wwwroot\icon\p3.png" />
+    <Content Remove="wwwroot\icon\p4.png" />
+    <Content Remove="wwwroot\icon\p5.png" />
+    <Content Remove="wwwroot\icon\p6.png" />
+    <Content Remove="wwwroot\icon\p7.png" />
+    <Content Remove="wwwroot\icon\service1.png" />
+    <Content Remove="wwwroot\icon\service2.png" />
+    <Content Remove="wwwroot\icon\service3.png" />
+    <Content Remove="wwwroot\icon\service4.png" />
+    <Content Remove="wwwroot\icon\service5.png" />
+    <Content Remove="wwwroot\icon\service6.png" />
+    <Content Remove="wwwroot\images\1.jpg" />
+    <Content Remove="wwwroot\images\2.jpg" />
+    <Content Remove="wwwroot\images\3.jpg" />
+    <Content Remove="wwwroot\images\banner2.jpg" />
+    <Content Remove="wwwroot\images\bg.jpg" />
+    <Content Remove="wwwroot\images\lllll.png" />
+    <Content Remove="wwwroot\images\loading.gif" />
+    <Content Remove="wwwroot\images\logo.jpg" />
+    <Content Remove="wwwroot\images\mapimg.jpg" />
+    <Content Remove="wwwroot\images\pc_layout.png" />
+    <Content Remove="wwwroot\js\bootstrap.bundle.min.js" />
+    <Content Remove="wwwroot\js\custom.js" />
+    <Content Remove="wwwroot\js\jquery-3.0.0.min.js" />
+    <Content Remove="wwwroot\js\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Remove="wwwroot\js\jquery.min.js" />
+    <Content Remove="wwwroot\js\jquery.validate.js" />
+    <Content Remove="wwwroot\js\plugin.js" />
+    <Content Remove="wwwroot\js\popper.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\css\animate.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\bootstrap.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\jquery-ui.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\jquery.mCustomScrollbar.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\meanmenu.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\nice-select.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\normalize.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\owl.carousel.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\responsive.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\slick.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\animate.min.css" />
+    <None Include="wwwroot\css\bootstrap.min.css" />
+    <None Include="wwwroot\css\jquery-ui.css" />
+    <None Include="wwwroot\css\jquery.mCustomScrollbar.min.css" />
+    <None Include="wwwroot\css\meanmenu.css" />
+    <None Include="wwwroot\css\nice-select.css" />
+    <None Include="wwwroot\css\normalize.css" />
+    <None Include="wwwroot\css\owl.carousel.min.css" />
+    <None Include="wwwroot\css\responsive.css" />
+    <None Include="wwwroot\css\slick.css" />
+    <None Include="wwwroot\css\style.css" />
+    <None Include="wwwroot\icon\1.png" />
+    <None Include="wwwroot\icon\2.png" />
+    <None Include="wwwroot\icon\3.png" />
+    <None Include="wwwroot\icon\4.png" />
+    <None Include="wwwroot\icon\calll.png" />
+    <None Include="wwwroot\icon\p1.png" />
+    <None Include="wwwroot\icon\p2.png" />
+    <None Include="wwwroot\icon\p3.png" />
+    <None Include="wwwroot\icon\p4.png" />
+    <None Include="wwwroot\icon\p5.png" />
+    <None Include="wwwroot\icon\p6.png" />
+    <None Include="wwwroot\icon\p7.png" />
+    <None Include="wwwroot\icon\service1.png" />
+    <None Include="wwwroot\icon\service2.png" />
+    <None Include="wwwroot\icon\service3.png" />
+    <None Include="wwwroot\icon\service4.png" />
+    <None Include="wwwroot\icon\service5.png" />
+    <None Include="wwwroot\icon\service6.png" />
+    <None Include="wwwroot\images\1.jpg" />
+    <None Include="wwwroot\images\2.jpg" />
+    <None Include="wwwroot\images\3.jpg" />
+    <None Include="wwwroot\images\banner2.jpg" />
+    <None Include="wwwroot\images\bg.jpg" />
+    <None Include="wwwroot\images\lllll.png" />
+    <None Include="wwwroot\images\loading.gif" />
+    <None Include="wwwroot\images\logo.jpg" />
+    <None Include="wwwroot\images\mapimg.jpg" />
+    <None Include="wwwroot\images\pc_layout.png" />
+    <None Include="wwwroot\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\js\custom.js" />
+    <None Include="wwwroot\js\jquery-3.0.0.min.js" />
+    <None Include="wwwroot\js\jquery.mCustomScrollbar.concat.min.js" />
+    <None Include="wwwroot\js\jquery.min.js" />
+    <None Include="wwwroot\js\jquery.validate.js" />
+    <None Include="wwwroot\js\plugin.js" />
+    <None Include="wwwroot\js\popper.min.js" />
+    <None Include="wwwroot\js\Product.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.15" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProductCart</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ProductCart.styles.css" asp-append-version="true" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/responsive.css">
+    <link rel="icon" href="~/images/fevicon.png" type="image/gif" />
+    <link rel="stylesheet" href="~/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-1nOOqOuG7nqE67GjagPlRQKsrbf5zbyPLQI5w6DByyI=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    @*<header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                <div class="full">
+                    <div class="center-desk">
+                        <div class="logo"> <a asp-controller="ProductUI" asp-action="ProductHome"><img src="~/images/logo.jpg" alt="logo" /></a> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-7 col-lg-7 col-md-9 col-sm-9">
+                <div class="menu-area">
+                    <div class="limit-box">
+                        <nav class="main-menu">
+                            <ul class="menu-area-main">                               
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="ProductUI" asp-action="ProductHome">Home</a>
+                                </li>
+                                <li><a class="nav-link" asp-area="" asp-controller="ProductUI" asp-action="Product">Products</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li class="mean-last"> <a href="#contact">signup</a> </li>                               
+                            </ul>
+                           
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                <li><a class="buy" href="#">Login</a></li>
+            </div>
+
+        </nav>
+    </header>*@
+  @*  <header>
+        <!-- header inner -->
+        <div class="header">
+            <div class="head_top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <div class="top-box">
+                                <ul class="sociel_link">
+                                    <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                    <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li> <a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <div class="top-box">
+                                <p>long established fact that a reader will be </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                        <div class="full">
+                            <div class="center-desk">
+                                <div class="logo"> <a asp-controller="ProductUI" asp-action="ProductHome"><img src="~/images/logo.jpg" alt="logo" /></a> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-9 col-sm-9">
+                        <div class="menu-area">
+                            <div class="limit-box">
+                                <nav class="main-menu">
+                                    <ul class="menu-area-main">
+                                        <li class="active">  <a class="nav-link text-dark" asp-area="" asp-controller="ProductUI" asp-action="ProductHome">Home</a> </li>
+                                        <li><a class="nav-link" asp-area="" asp-controller="ProductUI" asp-action="Product">Products</a> </li>
+                                        <li> <a href="about.html">About</a> </li>
+                                        <li> <a href="blog.html"> Blog</a> </li>
+                                        <li> <a href="contact.html">Contact</a> </li>
+                                        <li class="mean-last"> <a href="#contact">signup</a> </li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                        <li><a class="buy" href="#">Login</a></li>
+                    </div>
+                </div>
+            </div>
+            <!-- end header inner -->
+    </header>*@
+
+    <div >
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div><br />
+
+    <footer>
+            <div class="copyright">               
+                <p>Copyright 2023 All Right Reserved By Shubham Pardeshi</a></p>
+            </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <!-- Your custom plugin.js -->
+   @* <script src="~/js/plugin.js"></script>
+    <!-- Sidebar and other custom scripts -->
+    <script src="~/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="~/js/custom.js"></script>*@
+    <!-- FancyBox JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
